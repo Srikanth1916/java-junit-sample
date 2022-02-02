@@ -5,7 +5,7 @@ on:
 
 jobs:
   facadapi:
-    name: 'facadapi process'
+    name: 'Unit test'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,5 +22,5 @@ jobs:
         distribution: 'adopt'		
         cache: maven
 
-    - name: Build the maven
-      run:  mvn clean install
+    - name: unit test
+      run:  mvn clean test
